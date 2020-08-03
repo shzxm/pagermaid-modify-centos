@@ -50,7 +50,7 @@ read api_hash
 echo "Writting App api_hash..."
 sed -i -e 's/api_hash\: \"HASH_HERE\"/api_hash\: \"'${api_hash}'\"/g' config.yml
 screen -dmS userbot
-screen -x -S userbot -p 0 -X stuff "cd /root/PagerMaid-Modify && python3.6 -m pagermaid"
+screen -x -S userbot -p 0 -X stuff "cd /root/PagerMaid-Modify && python3 -m pagermaid"
 screen -x -S userbot -p 0 -X stuff $'\n'
 read -p "请输入您的 Telegram 手机号码: " phonenum
 screen -x -S userbot -p 0 -X stuff "$phonenum"
